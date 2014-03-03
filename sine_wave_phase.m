@@ -29,14 +29,23 @@ circw = 1;
 linecolor = 'k';
 circcolor1 = 'k';
 circcolor2 = 'r';
+
+w = 0.4;
+h = 0.22;
+s = 0.09;
+l = 0.3;
+b1 = 0.08;
+b2 = b1+s+h;
+b3 = b2+s+h;
+
    
-figure;
-subplot(3,1,2)
+% figure;
+subplot('Position', [l,b2,w,h])
     plot(t,x1a,'k')
         xlim([1 5]);
         ylim([-1.57 1.57]);
         ylabel('Amplitude');
-        title('Sinusoid signal');
+        title('Zoomed sinusoid signal');
     
         line([0 length(t)], [0 0], 'LineStyle','--','Color',linecolor);
     
@@ -56,14 +65,17 @@ subplot(3,1,2)
         viscircles([1.667, 0],0.05,'EdgeColor',circcolor2,'LineWidth',circw);
         line([1.667 1.667],[-0.5 -0.375],'Color',circcolor1);
 
-subplot(3,1,1)
+subplot('Position', [l,b3,w,h])
     plot(t,x1a,'k')
+    title('Sinusoid signal')
     ylabel('Amplpitude')
         
-subplot(3,1,3)
+subplot('Position', [l,b1,w,h])
     plot(t,pu1a,'k',t,pw1a,'r')
+    legend('Phase','Wrapped phase','Location','Best')
     ylabel('Phase (radians)')
     xlabel('Time (s)')
+    xlim([0 30])
 %% Export figure
 opts.Format = 'eps';
 opts.Width = 7; %width in inches of the output
