@@ -16,11 +16,11 @@
    
    x3a = cos(2*pi*F1a*t);
    x4a = cos(2*pi*F2a*t);
-   y2a = x1b+x2b;
+   y2a = x3a+x4a;
    
    w1a = F1a*(2*pi);
    pu1a = w1a*t;
-   pw1a = wrapToPi(pu1a);
+   pw1a = wrapTo2Pi(pu1a);
 %% 
    % Plot the signal versus time and show phase progress
    
