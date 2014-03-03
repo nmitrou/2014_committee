@@ -36,51 +36,52 @@ in4l = '-'; % IN4 line style
 dm4l = '-'; % DM4 line style
 
 subplot('Position',[l,b4,w,h])
-    errorbar(f,PSDbp_IN1_4,PSDbp_IN1_4se,'color', in1c,'LineStyle',in1l,'LineWidth',linew)
+    errorbar(f,PSDbp_IN1_2,PSDbp_IN1_2se,'color', in1c,'LineStyle',in1l,'LineWidth',linew)
         set(gca,'xscale','log')
         set(gca,'yscale','log')
         set(gca,'XTickLabel','')
         xlim([0.01 0.9])
         box off        
 hold on
-    errorbar(f,PSDbp_IN4_4,PSDbp_IN4_4se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
-    errorbar(f,PSDbp_DM4_4,PSDbp_DM4_4se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
-    errorbar(f,PSDbp_DM1_4,PSDbp_DM1_4se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
+    errorbar(f,PSDbp_IN4_2,PSDbp_IN4_2se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
+    errorbar(f,PSDbp_DM4_2,PSDbp_DM4_2se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
+    errorbar(f,PSDbp_DM1_2,PSDbp_DM1_2se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
         ylabel 'AP Power (mmHg^2/Hz)'
 subplot('Position',[l,b3,w,h])
-    errorbar(f,coh_IN1_4,coh_IN1_4se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
+    errorbar(f,coh_IN1_2,coh_IN1_2se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
         set(gca,'xscale','log')
         set(gca,'XTickLabel','')
         xlim([0.01 0.9])
         box off
 hold on
-    errorbar(f,coh_IN4_4,coh_IN4_4se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
-    errorbar(f,coh_DM4_4,coh_DM4_4se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
-    errorbar(f,coh_DM1_4,coh_DM1_4se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
+    errorbar(f,coh_IN4_2,coh_IN4_2se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
+    errorbar(f,coh_DM4_2,coh_DM4_2se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
+    errorbar(f,coh_DM1_2,coh_DM1_2se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
         ylabel 'Coherence^2'
         line([0.01 1],[0.5 0.5],'LineStyle','--','Color','k')
 subplot('Position',[l,b2,w,h])
-    errorbar(f,gain_IN1_4,gain_IN1_4se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
+    errorbar(f,gain_IN1_2,gain_IN1_2se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
         set(gca,'xscale','log')
-        set(gca,'XTickLabel','')
+%         set(gca,'XTickLabel','')
         xlim([0.01 0.9])
         box off
 hold on
-    errorbar(f,gain_IN4_4,gain_IN4_4se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
-    errorbar(f,gain_DM4_4,gain_DM4_4se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
-    errorbar(f,gain_DM1_4,gain_DM1_4se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
+    errorbar(f,gain_IN4_2,gain_IN4_2se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
+    errorbar(f,gain_DM4_2,gain_DM4_2se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
+    errorbar(f,gain_DM1_2,gain_DM1_2se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
         ylim([-20 15])
         ylabel 'Gain (dB)'
+        xlabel 'Frequency (Hz)'
         line([0.01 1],[0 0],'LineStyle','--','Color','k')
 subplot('Position',[l,b1,w,h])
-    errorbar(f,phase_IN1_4,phase_IN1_4se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
+    errorbar(f,phase_IN1_2,phase_IN1_2se,'color',in1c,'LineStyle',in1l,'LineWidth',linew)
         set(gca,'xscale','log')
         xlim([0.01 0.9])
         box off
 hold on
-    errorbar(f,phase_IN4_4,phase_IN4_4se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
-    errorbar(f,phase_DM4_4,phase_DM4_4se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
-    errorbar(f,phase_DM1_4,phase_DM1_4se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
+    errorbar(f,phase_IN4_2,phase_IN4_2se,'color',in4c,'LineStyle',in4l,'LineWidth',linew)
+    errorbar(f,phase_DM4_2,phase_DM4_2se,'color',dm4c,'LineStyle',dm4l,'LineWidth',linew)
+    errorbar(f,phase_DM1_2,phase_DM1_2se,'color',dm1c,'LineStyle',dm1l,'LineWidth',linew)
         ylim([-0.757 3.14])
         ylabel 'Phase (rad)'
         xlabel 'Frequency (Hz)'
@@ -94,4 +95,4 @@ opts.FontMode = 'scaled';
 opts.FontSize = 1.1;
 set(gca,'clipping','off');
 set(gcf,'clipping','off');
-exportfig(gcf,'/Users/nickmitrou/Documents/SFU/PhD/Meetings/Committee_meeting_2014/DMNO_transferfx_LNAME.eps',opts);
+exportfig(gcf,'/Users/nickmitrou/Documents/SFU/PhD/Meetings/Committee_meeting_2014/DMNO_transferfx_CTL_gainonly.eps',opts);
