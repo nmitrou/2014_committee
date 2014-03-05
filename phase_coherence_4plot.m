@@ -1,5 +1,5 @@
 %% load PC array
-load('/Users/nickmitrou/Documents/SFU/PhD/Data/SPN-LNAME-LP/SPN_NAME_cluster/thresholds/2012b23_25hz_2ms_3_PCresults_MYO.mat');
+load('/Users/nickmitrou/Documents/SFU/PhD/Data/SPN-LNAME-LP/SPN_NAME_cluster/thresholds/2013C07_HR_25Hz_2ms_3_PCresults_MYO.mat');
 %% plot 4 subplots with phase coherence respective to 4 locations
 
 sig_only(sig_only==0) = NaN;
