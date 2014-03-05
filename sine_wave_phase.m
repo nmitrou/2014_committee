@@ -1,4 +1,4 @@
-%% plot two sine waves to show the concepts of frequency, phase and synchronization
+%% plot a sine wave to show what phase is
 
    %% Time specifications:
    Fs = 10;                   % samples per second
